@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import Header from "../components/Header";
 
-class Specialities extends Component {
+class Profile extends Component {
   componentDidMount() {
   }
 
@@ -12,7 +12,7 @@ class Specialities extends Component {
       <div>
         <Header />
         <div className="">
-          <h1>Specialities page</h1>
+          <h1>Appointments page</h1>
         </div>
       </div>
     );
@@ -21,14 +21,14 @@ class Specialities extends Component {
 
 const mapStateToProps = (state) => {
   return {
-   
+    userProfile: state.userProfile
   };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        
+        getProfile: (userId) => dispatch(getProfile(userId))
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialities);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

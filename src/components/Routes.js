@@ -5,7 +5,7 @@ import Appointments from "../containers/Appointments";
 import AppointmentById from "../containers/AppointmentById";
 import Doctors from "../containers/Doctors";
 import DoctorById from "../containers/DoctorById";
-import Specialities from "../containers/Specialities";
+import Specialties from "../containers/Specialties";
 import NotFound from "../containers/NotFound";
 
 
@@ -16,9 +16,9 @@ const Routes = () => {
         <Route exact path="/" component={Home} />
         <Route path="/appointments" component={Appointments} />
         <Route path= {`/appointment/:appointmentId`} component={AppointmentById} />
+        <Route path= {`/doctors/:doctorId`} component={DoctorById} />
         <Route path="/doctors" component={Doctors} />
-        <Route path= {`/doctor/:doctorId`} component={DoctorById} />
-        <Route path="/specialities" component={Specialities} />
+        <Route path="/specialties" component={Specialties} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
